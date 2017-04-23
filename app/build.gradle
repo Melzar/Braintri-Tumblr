@@ -1,8 +1,18 @@
 apply plugin: 'com.android.application'
+apply from: '../config/quality.gradle'
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
+
+    signingConfigs {
+        config {
+            keyAlias 'androiddebugkey'
+            storeFile file("../debug.keystore")
+            keyPassword 'android'
+            storePassword 'android'
+        }
+    }
     defaultConfig {
         applicationId "com.matuszew.braintri_tumblr"
         minSdkVersion 21
@@ -12,18 +22,51 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+
+        debug {
+            debuggable true
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
+    }
+
+    productFlavors {
+        dev {
+            resValue "string", "app_name", "Braintri Tumblr Dev"
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
     }
 }
 
 dependencies {
+
+    def presentationDependencies = rootProject.ext.presentationDependencies;
+    def commonDependencies = rootProject.ext.commonDependencies;
+    def testDependencies = rootProject.ext.testDependencies;
+
+    compile project(':domain')
+    compile project(':data')
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:25.1.1'
-    testCompile 'junit:junit:4.12'
+
+    compile presentationDependencies.recyclerView
+    compile presentationDependencies.appCompat
+    compile presentationDependencies.design
+    compile presentationDependencies.support
+    compile presentationDependencies.supportCompat
+
+    testCompile testDependencies.jUnit
+
 }

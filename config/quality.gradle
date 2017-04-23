@@ -1,0 +1,6 @@
+android {
+    lintOptions {
+        abortOnError true
+        lintConfig file("${project.rootDir}/config/quality/lint/lint.xml")
+    }
+}

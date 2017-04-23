@@ -1,0 +1,38 @@
+ext {
+
+    //region Presentation dependencies
+    supportLibrary = '25.3.0'
+    //endregion
+
+    //region Testing dependencies
+    jUnit = '4.12'
+    espresso = '2.2.2'
+    //endregion
+
+
+
+    commonDependencies = [
+
+    ]
+
+    presentationDependencies = [
+        recyclerView: "com.android.support:recyclerview-v7:${supportLibrary}",
+        appCompat: "com.android.support:appcompat-v7:${supportLibrary}",
+        design: "com.android.support:design:${supportLibrary}",
+        support: "com.android.support:support-v4:${supportLibrary}",
+        supportCompat: "com.android.support:support-compat:${supportLibrary}"
+    ]
+
+    domainDependencies = [
+
+    ]
+
+    dataDependencies = [
+
+    ]
+
+    testDependencies = [
+       jUnit: "junit:junit:${jUnit}",
+       espresso: "com.android.support.test.espresso:espresso-core:${espresso}"
+    ]
+}
