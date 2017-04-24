@@ -9,6 +9,8 @@ import android.view.ViewStub;
 import com.matuszew.braintri_tumblr.BaseActivity;
 import com.matuszew.braintri_tumblr.R;
 
+import javax.inject.Inject;
+
 import butterknife.ButterKnife;
 
 /**
@@ -17,6 +19,7 @@ import butterknife.ButterKnife;
 
 public class Layouter extends ContextWrapper {
 
+    @Inject
     public Layouter(Context base) {
         super(base);
     }

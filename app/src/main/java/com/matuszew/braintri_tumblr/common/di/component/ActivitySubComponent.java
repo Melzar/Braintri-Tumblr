@@ -1,6 +1,8 @@
 package com.matuszew.braintri_tumblr.common.di.component;
 
 import com.matuszew.braintri_tumblr.common.di.module.ActivityModule;
+import com.matuszew.braintri_tumblr.common.di.module.PresenterModule;
+import com.matuszew.braintri_tumblr.common.di.module.ViewModelModule;
 import com.matuszew.braintri_tumblr.common.di.scope.ActivityScope;
 import com.matuszew.braintri_tumblr.login.LoginActivity;
 
@@ -12,7 +14,9 @@ import dagger.Subcomponent;
 
 @ActivityScope
 @Subcomponent(modules = {
-        ActivityModule.class
+        ActivityModule.class,
+        PresenterModule.class,
+        ViewModelModule.class
 })
 public interface ActivitySubComponent {
 
