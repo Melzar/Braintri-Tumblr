@@ -37,6 +37,7 @@ android {
     productFlavors {
         dev {
             resValue "string", "app_name", "Braintri Tumblr Dev"
+            buildConfigField "String", "BASE_URL", "\"www\""
         }
     }
 
@@ -61,12 +62,24 @@ dependencies {
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
+    annotationProcessor commonDependencies.javax
+
+    compile commonDependencies.rxJava
+    compile commonDependencies.rxAndroid
+
     compile presentationDependencies.recyclerView
     compile presentationDependencies.appCompat
     compile presentationDependencies.design
     compile presentationDependencies.support
     compile presentationDependencies.supportCompat
 
-    testCompile testDependencies.jUnit
+    compile presentationDependencies.gsonConverter
+    compile presentationDependencies.okHttpInterceptor
+    compile presentationDependencies.rxAdapter
 
+    compile presentationDependencies.dagger
+    annotationProcessor presentationDependencies.daggerCompiler
+
+    testCompile testDependencies.jUnit
+    testCompile testDependencies.okhttpMockServer
 }

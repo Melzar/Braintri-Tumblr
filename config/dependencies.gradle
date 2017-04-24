@@ -1,7 +1,25 @@
 ext {
 
+    //region Common dependencies
+    javax = '1.0'
+    retrofit = '2.2.0'
+    okhttp = '3.7.0'
+    rxJava = '2.0.9'
+    rxAndroid = '2.0.1'
+    rxAdapter = '1.0.0'
+    //endregion
+
     //region Presentation dependencies
     supportLibrary = '25.3.0'
+    dagger = '2.10'
+    //endregion
+
+    //region Domain dependencies
+
+    //endregion
+
+    //region Data dependencies
+
     //endregion
 
     //region Testing dependencies
@@ -9,10 +27,11 @@ ext {
     espresso = '2.2.2'
     //endregion
 
-
-
     commonDependencies = [
-
+        javax: "javax.annotation:jsr250-api:${javax}",
+        retrofit: "com.squareup.retrofit2:retrofit:${retrofit}",
+        rxAndroid: "io.reactivex.rxjava2:rxandroid:${rxAndroid}",
+        rxJava: "io.reactivex.rxjava2:rxjava:${rxJava}",
     ]
 
     presentationDependencies = [
@@ -20,7 +39,14 @@ ext {
         appCompat: "com.android.support:appcompat-v7:${supportLibrary}",
         design: "com.android.support:design:${supportLibrary}",
         support: "com.android.support:support-v4:${supportLibrary}",
-        supportCompat: "com.android.support:support-compat:${supportLibrary}"
+        supportCompat: "com.android.support:support-compat:${supportLibrary}",
+
+        dagger: "com.google.dagger:dagger:${dagger}",
+        daggerCompiler: "com.google.dagger:dagger-compiler:${dagger}",
+
+        gsonConverter: "com.squareup.retrofit2:converter-gson:${retrofit}",
+        okHttpInterceptor: "com.squareup.okhttp3:logging-interceptor:${okhttp}",
+        rxAdapter: "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${rxAdapter}"
     ]
 
     domainDependencies = [
@@ -33,6 +59,7 @@ ext {
 
     testDependencies = [
        jUnit: "junit:junit:${jUnit}",
-       espresso: "com.android.support.test.espresso:espresso-core:${espresso}"
+       espresso: "com.android.support.test.espresso:espresso-core:${espresso}",
+       okhttpMockServer: "com.squareup.okhttp3:mockwebserver:${okhttp}"
     ]
 }
