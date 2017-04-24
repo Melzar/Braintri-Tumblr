@@ -2,6 +2,7 @@ package com.matuszew.braintri_tumblr.common.di.component;
 
 import com.matuszew.braintri_tumblr.common.di.module.ActivityModule;
 import com.matuszew.braintri_tumblr.common.di.scope.ActivityScope;
+import com.matuszew.braintri_tumblr.login.LoginActivity;
 
 import dagger.Subcomponent;
 
@@ -15,4 +16,7 @@ import dagger.Subcomponent;
 })
 public interface ActivitySubComponent {
 
+        void inject(LoginActivity loginActivity);
+
+        HelperSubComponent plus();
 }

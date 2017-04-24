@@ -12,6 +12,8 @@ ext {
     //region Presentation dependencies
     supportLibrary = '25.3.0'
     dagger = '2.10'
+    butterknife = '8.5.1'
+    constraintLayout = '+'
     //endregion
 
     //region Domain dependencies
@@ -40,9 +42,13 @@ ext {
         design: "com.android.support:design:${supportLibrary}",
         support: "com.android.support:support-v4:${supportLibrary}",
         supportCompat: "com.android.support:support-compat:${supportLibrary}",
+        constraintLayout: "com.android.support.constraint:constraint-layout:${constraintLayout}",
 
         dagger: "com.google.dagger:dagger:${dagger}",
         daggerCompiler: "com.google.dagger:dagger-compiler:${dagger}",
+
+        butterknife: "com.jakewharton:butterknife:${butterknife}",
+        butterknifeCompiler: "com.jakewharton:butterknife-compiler:${butterknife}",
 
         gsonConverter: "com.squareup.retrofit2:converter-gson:${retrofit}",
         okHttpInterceptor: "com.squareup.okhttp3:logging-interceptor:${okhttp}",

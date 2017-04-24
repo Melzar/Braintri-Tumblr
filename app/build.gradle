@@ -72,6 +72,7 @@ dependencies {
     compile presentationDependencies.design
     compile presentationDependencies.support
     compile presentationDependencies.supportCompat
+    compile presentationDependencies.constraintLayout
 
     compile presentationDependencies.gsonConverter
     compile presentationDependencies.okHttpInterceptor
@@ -79,6 +80,9 @@ dependencies {
 
     compile presentationDependencies.dagger
     annotationProcessor presentationDependencies.daggerCompiler
+
+    compile presentationDependencies.butterknife
+    annotationProcessor presentationDependencies.butterknifeCompiler
 
     testCompile testDependencies.jUnit
     testCompile testDependencies.okhttpMockServer
