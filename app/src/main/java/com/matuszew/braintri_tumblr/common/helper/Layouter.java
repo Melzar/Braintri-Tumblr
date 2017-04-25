@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
  * Created by matuszewski on 24/04/2017.
  */
 
-public class Layouter extends ContextWrapper {
+public final class Layouter extends ContextWrapper {
 
     @Inject
     public Layouter(Context base) {

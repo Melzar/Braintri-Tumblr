@@ -11,6 +11,7 @@ import com.matuszew.braintri_tumblr.common.di.component.ApplicationComponent;
 import com.matuszew.braintri_tumblr.common.di.component.HelperSubComponent;
 import com.matuszew.braintri_tumblr.common.di.container.BraintriTumblrApplication;
 import com.matuszew.braintri_tumblr.common.di.module.ActivityModule;
+import com.matuszew.braintri_tumblr.common.helper.KeyboardHelper;
 import com.matuszew.braintri_tumblr.common.helper.Layouter;
 
 import javax.inject.Inject;
@@ -22,6 +23,9 @@ import javax.inject.Inject;
 public abstract class BaseActivity<B extends ViewDataBinding, P extends BasePresenterContract> extends AppCompatActivity {
 
     private Layouter layouter;
+
+    @Inject
+    KeyboardHelper keyboardHelper;
 
     @Inject
     protected P presenter;
@@ -39,24 +43,26 @@ public abstract class BaseActivity<B extends ViewDataBinding, P extends BasePres
         HelperSubComponent helperSubComponent = applicationComponent.plus(activityModule).plus();
 
         layouter = helperSubComponent.provideLayouter();
+        setLayout();
         setActivityLayout();
-
         injectDependencies(applicationComponent.plus(activityModule));
         setupBinding();
     }
 
-    protected void setActivityLayout(){
+    protected void setLayout(){
         setContentView(R.layout.base_content);
+    }
+
+    private void setupBinding(){
+        binding.setVariable(BR.vm, presenter.getViewModel());
     }
 
     protected void setActivityLayoutAndBinding(@LayoutRes int layoutId){
         binding = DataBindingUtil.bind(layouter.setActivityContentLayout(layoutId));
     }
 
+    protected abstract void setActivityLayout();
+
     protected abstract void injectDependencies(ActivitySubComponent activitySubComponent);
 
-    private void setupBinding(){
-//        binding.setVariable(BR.vm, presenter.)
-
-    }
 }

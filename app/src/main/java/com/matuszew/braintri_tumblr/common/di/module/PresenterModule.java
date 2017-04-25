@@ -2,6 +2,10 @@ package com.matuszew.braintri_tumblr.common.di.module;
 
 import com.matuszew.braintri_tumblr.login.LoginContract;
 import com.matuszew.braintri_tumblr.login.LoginPresenter;
+import com.matuszew.braintri_tumblr.posts.details.PostDetailsContract;
+import com.matuszew.braintri_tumblr.posts.details.PostDetailsPresenter;
+import com.matuszew.braintri_tumblr.posts.list.PostsListContract;
+import com.matuszew.braintri_tumblr.posts.list.PostsListPresenter;
 
 import dagger.Binds;
 import dagger.Module;
@@ -14,5 +18,11 @@ import dagger.Module;
 public abstract class PresenterModule {
 
     @Binds
-    abstract LoginContract.Presenter providesLoginPresenter(LoginPresenter presenter);
+    abstract LoginContract.Presenter providesLoginPresenter(LoginPresenter loginPresenter);
+
+    @Binds
+    abstract PostsListContract.Presenter providesPostsListPresenter(PostsListPresenter listPresenter);
+
+    @Binds
+    abstract PostDetailsContract.Presenter providesPostDetailsPresenter(PostDetailsPresenter detailsPresenter);
 }

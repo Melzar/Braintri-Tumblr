@@ -1,11 +1,93 @@
 <resources>
 
+
+    <!-- General styles -->
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Themes -->
+
+    <style name="EditText.DarkBackgroundTheme">
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorControlActivated">@android:color/white</item>
+        <item name="colorControlHighlight">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="textColorError">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Activity styles -->
+
+    <style name="Activity"></style>
+
+    <style name="Activity.BackgroundDark">
+        <item name="android:background">@color/colorPrimaryDark</item>
+    </style>
+
+    <!-- EditText styles -->
+
+    <style name="EditText">
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="EditText.DarkBackground">
+        <item name="android:theme">@style/EditText.DarkBackgroundTheme</item>
+    </style>
+
+    <style name="EditText.DarkBackground.Large">
+        <item name="android:textSize">@dimen/font_lg</item>
+    </style>
+
+    <!-- Button styles -->
+
+    <style name="Button"></style>
+
+    <style name="Button.Blue">
+        <item name="android:background">@drawable/drawable_rounded_blue</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+    android:background=""
+    <!-- Login Screen styles -->
+
+    <style name="Login"></style>
+
+    <style name="Login.Logo">
+        <item name="android:background">@drawable/tumblr</item>
+        <item name="android:layout_marginBottom">@dimen/space_xxl</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="Login.SubmitButton">
+        <item name="android:theme">@style/Button.Blue</item>
+        <item name="android:background">@drawable/drawable_rounded_blue</item>
+        <item name="android:layout_marginTop">@dimen/space_lg</item>
+        <item name="android:layout_marginLeft">@dimen/space_xxxxl</item>
+        <item name="android:layout_marginRight">@dimen/space_xxxxl</item>
     </style>
 
 </resources>

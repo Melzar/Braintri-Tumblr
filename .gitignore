@@ -9,7 +9,5 @@
 /captures
 .externalNativeBuild
 app/libs/
-app/src/main/res/drawable/
 data/libs/
 data/src/main/java/
-data/src/main/res/drawable/

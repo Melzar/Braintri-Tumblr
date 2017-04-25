@@ -12,11 +12,15 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginContr
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setActivityLayoutAndBinding(R.layout.activity_login);
     }
 
     @Override
     protected void injectDependencies(ActivitySubComponent activitySubComponent) {
         activitySubComponent.inject(this);
+    }
+
+    @Override
+    protected void setActivityLayout() {
+        setActivityLayoutAndBinding(R.layout.activity_login);
     }
 }

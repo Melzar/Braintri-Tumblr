@@ -2,11 +2,18 @@ package com.matuszew.braintri_tumblr;
 
 import android.databinding.BaseObservable;
 
+import com.matuszew.braintri_tumblr.common.helper.Navigator;
+
+import javax.inject.Inject;
+
 /**
  * Created by matuszewski on 24/04/2017.
  */
 
 public abstract class BaseViewModel<M> extends BaseObservable {
+
+    @Inject
+    protected Navigator navigator;
 
     private M model;
 

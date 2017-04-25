@@ -5,6 +5,8 @@ import com.matuszew.braintri_tumblr.common.di.module.PresenterModule;
 import com.matuszew.braintri_tumblr.common.di.module.ViewModelModule;
 import com.matuszew.braintri_tumblr.common.di.scope.ActivityScope;
 import com.matuszew.braintri_tumblr.login.LoginActivity;
+import com.matuszew.braintri_tumblr.posts.details.PostDetailsActivity;
+import com.matuszew.braintri_tumblr.posts.list.PostsListActivity;
 
 import dagger.Subcomponent;
 
@@ -21,6 +23,8 @@ import dagger.Subcomponent;
 public interface ActivitySubComponent {
 
         void inject(LoginActivity loginActivity);
+        void inject(PostsListActivity postsListActivity);
+        void inject(PostDetailsActivity postDetailsActivity);
 
         HelperSubComponent plus();
 }

@@ -1,1 +1,21 @@
-<resources></resources>
+<resources>
+    <!-- General strings -->
+
+    <string name="activity_posts_lists">Posts list</string>
+    <string name="activity_post_details">Post details</string>
+
+    <!-- Navigation drawer -->
+
+    <string name="navigation_posts_lists">Posts</string>
+    <string name="navigation_logout">Change User</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Login screen -->
+
+    <string name="login_username_hint">Username</string>
+    <string name="login_submit_button">Preview posts</string>
+
+
+</resources>
