@@ -67,6 +67,9 @@ dependencies {
     compile commonDependencies.rxJava
     compile commonDependencies.rxAndroid
 
+    compile commonDependencies.dagger
+    annotationProcessor commonDependencies.daggerCompiler
+
     compile presentationDependencies.recyclerView
     compile presentationDependencies.appCompat
     compile presentationDependencies.design
@@ -77,9 +80,6 @@ dependencies {
     compile presentationDependencies.gsonConverter
     compile presentationDependencies.okHttpInterceptor
     compile presentationDependencies.rxAdapter
-
-    compile presentationDependencies.dagger
-    annotationProcessor presentationDependencies.daggerCompiler
 
     compile presentationDependencies.butterknife
     annotationProcessor presentationDependencies.butterknifeCompiler

@@ -34,6 +34,8 @@ ext {
         retrofit: "com.squareup.retrofit2:retrofit:${retrofit}",
         rxAndroid: "io.reactivex.rxjava2:rxandroid:${rxAndroid}",
         rxJava: "io.reactivex.rxjava2:rxjava:${rxJava}",
+        dagger: "com.google.dagger:dagger:${dagger}",
+        daggerCompiler: "com.google.dagger:dagger-compiler:${dagger}",
     ]
 
     presentationDependencies = [
@@ -43,9 +45,6 @@ ext {
         support: "com.android.support:support-v4:${supportLibrary}",
         supportCompat: "com.android.support:support-compat:${supportLibrary}",
         constraintLayout: "com.android.support.constraint:constraint-layout:${constraintLayout}",
-
-        dagger: "com.google.dagger:dagger:${dagger}",
-        daggerCompiler: "com.google.dagger:dagger-compiler:${dagger}",
 
         butterknife: "com.jakewharton:butterknife:${butterknife}",
         butterknifeCompiler: "com.jakewharton:butterknife-compiler:${butterknife}",

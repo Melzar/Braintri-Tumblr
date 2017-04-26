@@ -35,5 +35,13 @@ dependencies {
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
+    compile commonDependencies.dagger
+    annotationProcessor commonDependencies.daggerCompiler
+
+    compile commonDependencies.rxJava
+    compile commonDependencies.rxAndroid
+
+    compile commonDependencies.retrofit
+
     testCompile testDependencies.jUnit
 }
