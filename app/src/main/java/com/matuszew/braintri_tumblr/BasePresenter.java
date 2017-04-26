@@ -10,6 +10,7 @@ public abstract class BasePresenter<VM extends BaseViewModelContract> {
 
     public BasePresenter(VM viewModel) {
         this.viewModel = viewModel;
+        viewModel.setPresenter(this);
     }
 
     public VM getViewModel() {

@@ -1,9 +1,8 @@
 package com.matuszew.data.posts;
 
+import com.matuszew.data.common.model.bo.Tumblr;
 import com.matuszew.data.posts.request.GetPostDetailsRequest;
 import com.matuszew.data.posts.request.GetPostsRequest;
-
-import java.util.List;
 
 import io.reactivex.Single;
 
@@ -13,7 +12,7 @@ import io.reactivex.Single;
 
 public interface PostsRepository {
 
-    Single<List<Object>> getPostsList(GetPostsRequest getPostsRequest);
+    Single<Tumblr> getPostsList(GetPostsRequest getPostsRequest);
 
-    Single<Object> getPostDetails(GetPostDetailsRequest getPostDetailsRequest);
+    Single<Tumblr> getPostDetails(GetPostDetailsRequest getPostDetailsRequest);
 }

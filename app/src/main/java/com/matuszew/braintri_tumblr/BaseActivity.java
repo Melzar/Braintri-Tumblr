@@ -61,6 +61,24 @@ public abstract class BaseActivity<B extends ViewDataBinding, P extends BasePres
         binding = DataBindingUtil.bind(layouter.setActivityContentLayout(layoutId));
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        presenter.init();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        presenter.clear();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        presenter.clear();
+    }
+
     protected abstract void setActivityLayout();
 
     protected abstract void injectDependencies(ActivitySubComponent activitySubComponent);

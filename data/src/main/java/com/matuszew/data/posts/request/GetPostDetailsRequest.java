@@ -5,4 +5,18 @@ package com.matuszew.data.posts.request;
  */
 
 public class GetPostDetailsRequest {
+
+    private String postId;
+
+    public GetPostDetailsRequest(String postId) {
+        this.postId = postId;
+    }
+
+    public String getPostId() {
+        return postId;
+    }
+
+    public void setPostId(String postId) {
+        this.postId = postId;
+    }
 }

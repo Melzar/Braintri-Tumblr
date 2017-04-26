@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import com.matuszew.braintri_tumblr.BaseDrawerActivity;
 import com.matuszew.braintri_tumblr.R;
 import com.matuszew.braintri_tumblr.common.enumeration.DrawerMenuEnumeration;
+import com.matuszew.braintri_tumblr.common.util.SessionUtil;
 
 import javax.inject.Inject;
 
@@ -60,7 +61,11 @@ public final class DrawerNavigator extends ContextWrapper
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        navigator.startActivityTop(DrawerMenuEnumeration.values()[item.getOrder()].getActivityClass());
+        DrawerMenuEnumeration menuEnumeration = DrawerMenuEnumeration.values()[item.getOrder()];
+        if(menuEnumeration == DrawerMenuEnumeration.LOGOUT){
+            SessionUtil.clearSession();
+        }
+        navigator.startActivityTop(menuEnumeration.getActivityClass());
         hideDrawer();
         return true;
     }

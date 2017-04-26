@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.matuszew.braintri_tumblr">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    
     <application
         android:name=".common.di.container.BraintriTumblrApplication"
         android:allowBackup="true"

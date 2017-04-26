@@ -37,7 +37,7 @@ android {
     productFlavors {
         dev {
             resValue "string", "app_name", "Braintri Tumblr Dev"
-            buildConfigField "String", "BASE_URL", "\"www\""
+            buildConfigField "String", "BASE_URL", "\"http://tumblrusername.tumblr.com/api/read/\""
         }
     }
 
@@ -70,14 +70,19 @@ dependencies {
     compile commonDependencies.dagger
     annotationProcessor commonDependencies.daggerCompiler
 
+    compile commonDependencies.gsonConverter
+
+    compile commonDependencies.parceler
+    annotationProcessor commonDependencies.parcelerAnnotation
+
     compile presentationDependencies.recyclerView
+    compile presentationDependencies.cardView
     compile presentationDependencies.appCompat
     compile presentationDependencies.design
     compile presentationDependencies.support
     compile presentationDependencies.supportCompat
     compile presentationDependencies.constraintLayout
 
-    compile presentationDependencies.gsonConverter
     compile presentationDependencies.okHttpInterceptor
     compile presentationDependencies.rxAdapter
 
@@ -86,5 +91,4 @@ dependencies {
 
     testCompile testDependencies.jUnit
     testCompile testDependencies.okhttpMockServer
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

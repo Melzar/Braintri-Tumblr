@@ -1,8 +1,17 @@
 <resources>
+    <!-- Intent Keys -->
+    <string name="post_parcel_key">POST_KEY</string>
+
     <!-- General strings -->
 
     <string name="activity_posts_lists">Posts list</string>
     <string name="activity_post_details">Post details</string>
+
+    <string name="braintri_session">BraintriSession</string>
+    <string name="tumblr_user_session">UserSession</string>
+
+    <string name="url_placeholder">tumblrusername</string>
+    <string name="tumblr_json_body_prefix">var tumblr_api_read = </string>
 
     <!-- Navigation drawer -->
 

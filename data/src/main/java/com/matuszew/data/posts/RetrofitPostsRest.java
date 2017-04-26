@@ -1,9 +1,10 @@
 package com.matuszew.data.posts;
 
-import java.util.List;
+import com.matuszew.data.common.model.json.TumblrJson;
 
 import io.reactivex.Single;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 /**
  * Created by matuszewski on 26/04/2017.
@@ -11,10 +12,10 @@ import retrofit2.http.GET;
 
 public interface RetrofitPostsRest {
 
-    @GET
-    Single<List<Object>> getPosts();
+    @GET("json")
+    Single<TumblrJson> getPosts();
 
-    @GET
-    Single<Object> getPost();
+    @GET("json")
+    Single<TumblrJson> getPost(@Query("id") String postId);
 
 }

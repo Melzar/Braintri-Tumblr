@@ -27,4 +27,5 @@ public interface ActivitySubComponent {
         void inject(PostDetailsActivity postDetailsActivity);
 
         HelperSubComponent plus();
+        ViewHolderSubComponent plusViewHolder();
 }

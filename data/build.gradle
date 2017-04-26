@@ -43,5 +43,13 @@ dependencies {
 
     compile commonDependencies.retrofit
 
+    compile commonDependencies.gsonConverter
+
+    compile commonDependencies.parceler
+    annotationProcessor commonDependencies.parcelerAnnotation
+
+    compile dataDependencies.mapStruct;
+    annotationProcessor dataDependencies.mapStructProcessor;
+
     testCompile testDependencies.jUnit
 }

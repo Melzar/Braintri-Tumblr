@@ -1,6 +1,7 @@
 package com.matuszew.braintri_tumblr.posts.details;
 
 import com.matuszew.braintri_tumblr.BaseViewModel;
+import com.matuszew.data.common.model.bo.Post;
 
 import javax.inject.Inject;
 
@@ -9,7 +10,7 @@ import javax.inject.Inject;
  */
 
 public class PostDetailsViewModel
-        extends BaseViewModel
+        extends BaseViewModel<Post, PostDetailsContract.Presenter>
         implements PostDetailsContract.ViewModel {
 
     @Inject
@@ -17,7 +18,9 @@ public class PostDetailsViewModel
     }
 
     @Override
-    public void update(Object model) {
+    protected void init() {
 
     }
+
+
 }

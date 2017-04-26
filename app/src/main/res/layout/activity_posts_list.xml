@@ -5,14 +5,25 @@
             name="vm"
             type="com.matuszew.braintri_tumblr.posts.list.PostsListViewModel"/>
     </data>
-
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
+        style="@style/Activity.BackgroundBeige"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.matuszew.braintri_tumblr.posts.list.PostsListActivity">
 
-        <include layout="@layout/partial_action_bar"/>
-    </android.support.constraint.ConstraintLayout>
+        <include layout="@layout/partial_action_bar" android:id="@+id/top_action_bar"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/post_list_recycler_view"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/top_action_bar"
+            app:adapter="@{vm.postsAdapter}">
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
 
 </layout>

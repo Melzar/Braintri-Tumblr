@@ -1,6 +1,8 @@
 package com.matuszew.braintri_tumblr.posts.list;
 
 import com.matuszew.braintri_tumblr.BaseViewModel;
+import com.matuszew.braintri_tumblr.posts.list.adapter.TumblrPostsAdapter;
+import com.matuszew.data.common.model.bo.Tumblr;
 
 import javax.inject.Inject;
 
@@ -9,14 +11,23 @@ import javax.inject.Inject;
  */
 
 public class PostsListViewModel
-        extends BaseViewModel implements PostsListContract.ViewModel {
+        extends BaseViewModel<Tumblr, PostsListContract.Presenter>
+        implements PostsListContract.ViewModel {
+
+    private final TumblrPostsAdapter postsAdapter;
 
     @Inject
-    public PostsListViewModel() {
+    public PostsListViewModel(TumblrPostsAdapter postsAdapter) {
+        this.postsAdapter = postsAdapter;
     }
 
     @Override
-    public void update(Object model) {
+    protected void init() {
+        postsAdapter.setPostList(getModel().getPosts());
+        postsAdapter.notifyDataSetChanged();
+    }
 
+    public TumblrPostsAdapter getPostsAdapter() {
+        return postsAdapter;
     }
 }

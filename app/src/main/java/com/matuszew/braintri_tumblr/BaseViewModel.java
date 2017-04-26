@@ -10,12 +10,14 @@ import javax.inject.Inject;
  * Created by matuszewski on 24/04/2017.
  */
 
-public abstract class BaseViewModel<M> extends BaseObservable {
+public abstract class BaseViewModel<M, P> extends BaseObservable {
 
     @Inject
     protected Navigator navigator;
 
     private M model;
+
+    private P presenter;
 
     public BaseViewModel() {
     }
@@ -27,4 +29,20 @@ public abstract class BaseViewModel<M> extends BaseObservable {
     public void setModel(M model) {
         this.model = model;
     }
+
+    public P getPresenter() {
+        return presenter;
+    }
+
+    public void setPresenter(P presenter) {
+        this.presenter = presenter;
+    }
+
+    public void update(M model){
+        this.model = model;
+        init();
+        notifyChange();
+    }
+
+    protected abstract void init();
 }

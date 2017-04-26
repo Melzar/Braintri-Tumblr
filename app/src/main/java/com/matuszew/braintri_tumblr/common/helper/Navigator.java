@@ -3,6 +3,7 @@ package com.matuszew.braintri_tumblr.common.helper;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
+import android.os.Bundle;
 
 import javax.inject.Inject;
 
@@ -24,6 +25,12 @@ public final class Navigator extends ContextWrapper{
     public void startActivityTop(Class activityToStart){
         Intent intent = new Intent(getBaseContext(), activityToStart);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
+
+    public void startActivity(Class activityToStart, Bundle bundleToPass){
+        Intent intent = new Intent(this, activityToStart);
+        intent.putExtras(bundleToPass);
         startActivity(intent);
     }
 }

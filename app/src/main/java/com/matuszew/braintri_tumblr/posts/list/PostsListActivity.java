@@ -1,6 +1,7 @@
 package com.matuszew.braintri_tumblr.posts.list;
 
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 
 import com.matuszew.braintri_tumblr.BaseDrawerActivity;
 import com.matuszew.braintri_tumblr.R;
@@ -18,6 +19,7 @@ public class PostsListActivity
     @Override
     protected void setActivityLayout() {
         setActivityLayoutAndBinding(R.layout.activity_posts_list);
+        binding.postListRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     @Override

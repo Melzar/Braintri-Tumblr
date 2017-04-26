@@ -2,6 +2,7 @@ package com.matuszew.braintri_tumblr.posts.details;
 
 import com.matuszew.braintri_tumblr.BasePresenterContract;
 import com.matuszew.braintri_tumblr.BaseViewModelContract;
+import com.matuszew.data.common.model.bo.Post;
 
 /**
  * Created by matuszewski on 26/04/2017.
@@ -9,11 +10,11 @@ import com.matuszew.braintri_tumblr.BaseViewModelContract;
 
 public interface PostDetailsContract {
 
-    interface Presenter extends BasePresenterContract{
+    interface Presenter extends BasePresenterContract<Post, ViewModel>{
 
     }
 
-    interface ViewModel extends BaseViewModelContract{
+    interface ViewModel extends BaseViewModelContract<Post, Presenter>{
 
     }
 }

@@ -3,7 +3,6 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-
     <!-- Font sizes -->
     <dimen name="font_xs">10sp</dimen>
     <dimen name="font_sm">11sp</dimen>
@@ -20,4 +19,9 @@
     <dimen name="space_xxl">30dp</dimen>
     <dimen name="space_xxxl">35dp</dimen>
     <dimen name="space_xxxxl">40dp</dimen>
+
+    <!-- CardView Height -->
+
+    <dimen name="post_list_item_height">110dp</dimen>
+    <dimen name="post_list_item_vertical_margin">8dp</dimen>
 </resources>

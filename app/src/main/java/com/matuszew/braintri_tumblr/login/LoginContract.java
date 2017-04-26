@@ -9,11 +9,11 @@ import com.matuszew.braintri_tumblr.BaseViewModelContract;
 
 public interface LoginContract {
 
-    interface Presenter extends BasePresenterContract{
+    interface Presenter extends BasePresenterContract<Object, ViewModel>{
 
     }
 
-    interface ViewModel extends BaseViewModelContract{
+    interface ViewModel extends BaseViewModelContract<Object, Presenter>{
 
     }
 

@@ -46,6 +46,26 @@
         <item name="android:background">@color/colorPrimaryDark</item>
     </style>
 
+    <style name="Activity.BackgroundBeige">
+        <item name="android:background">@color/colorBeige</item>
+    </style>
+
+    <!-- CardView styles -->
+
+    <style name="CustomCardView"></style>
+
+    <style name="CustomCardView.PostCardView">
+        <item name="android:layout_height">@dimen/post_list_item_height</item>
+        <item name="android:layout_marginTop">@dimen/post_list_item_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/post_list_item_vertical_margin</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="contentPaddingLeft">@dimen/activity_vertical_margin</item>
+        <item name="contentPaddingRight">@dimen/activity_vertical_margin</item>
+        <item name="contentPaddingTop">@dimen/activity_horizontal_margin</item>
+        <item name="contentPaddingBottom">@dimen/activity_horizontal_margin</item>
+    </style>
+
     <!-- EditText styles -->
 
     <style name="EditText">

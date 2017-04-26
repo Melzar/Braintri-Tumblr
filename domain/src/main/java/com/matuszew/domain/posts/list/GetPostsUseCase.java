@@ -1,5 +1,6 @@
 package com.matuszew.domain.posts.list;
 
+import com.matuszew.data.common.model.bo.Tumblr;
 import com.matuszew.data.posts.PostsRepository;
 import com.matuszew.data.posts.request.GetPostsRequest;
 import com.matuszew.domain.common.usecase.SingleUseCase;
@@ -14,7 +15,7 @@ import io.reactivex.Single;
  * Created by matuszewski on 26/04/2017.
  */
 
-public class GetPostsUseCase extends SingleUseCase<Object, GetPostsRequest> {
+public class GetPostsUseCase extends SingleUseCase<Tumblr, GetPostsRequest> {
 
     private final PostsRepository postsRepository;
 
@@ -27,7 +28,7 @@ public class GetPostsUseCase extends SingleUseCase<Object, GetPostsRequest> {
     }
 
     @Override
-    protected Single createObservable(GetPostsRequest request) {
+    protected Single<Tumblr> createObservable(GetPostsRequest request) {
         return postsRepository.getPostsList(request);
     }
 }
