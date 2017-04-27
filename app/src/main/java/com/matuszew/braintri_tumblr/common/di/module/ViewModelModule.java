@@ -6,6 +6,8 @@ import com.matuszew.braintri_tumblr.posts.details.PostDetailsContract;
 import com.matuszew.braintri_tumblr.posts.details.PostDetailsViewModel;
 import com.matuszew.braintri_tumblr.posts.list.PostsListContract;
 import com.matuszew.braintri_tumblr.posts.list.PostsListViewModel;
+import com.matuszew.braintri_tumblr.splash.SplashContract;
+import com.matuszew.braintri_tumblr.splash.SplashViewModel;
 
 import dagger.Binds;
 import dagger.Module;
@@ -16,6 +18,9 @@ import dagger.Module;
 
 @Module
 public abstract class ViewModelModule {
+
+    @Binds
+    abstract SplashContract.ViewModel providesSplashViewModel(SplashViewModel splashViewModel);
 
     @Binds
     abstract LoginContract.ViewModel providesLoginViewModel(LoginViewModel loginViewModel);

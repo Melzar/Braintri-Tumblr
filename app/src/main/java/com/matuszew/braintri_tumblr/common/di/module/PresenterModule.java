@@ -6,6 +6,8 @@ import com.matuszew.braintri_tumblr.posts.details.PostDetailsContract;
 import com.matuszew.braintri_tumblr.posts.details.PostDetailsPresenter;
 import com.matuszew.braintri_tumblr.posts.list.PostsListContract;
 import com.matuszew.braintri_tumblr.posts.list.PostsListPresenter;
+import com.matuszew.braintri_tumblr.splash.SplashContract;
+import com.matuszew.braintri_tumblr.splash.SplashPresenter;
 
 import dagger.Binds;
 import dagger.Module;
@@ -18,6 +20,9 @@ import dagger.Module;
 public abstract class PresenterModule {
 
     @Binds
+    abstract SplashContract.Presenter providesSplashPresenter(SplashPresenter splashPresenter);
+
+    @Binds
     abstract LoginContract.Presenter providesLoginPresenter(LoginPresenter loginPresenter);
 
     @Binds
@@ -25,4 +30,5 @@ public abstract class PresenterModule {
 
     @Binds
     abstract PostDetailsContract.Presenter providesPostDetailsPresenter(PostDetailsPresenter detailsPresenter);
+
 }
