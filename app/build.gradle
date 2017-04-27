@@ -89,6 +89,8 @@ dependencies {
     compile presentationDependencies.butterknife
     annotationProcessor presentationDependencies.butterknifeCompiler
 
+    compile presentationDependencies.picasso
+
     testCompile testDependencies.jUnit
     testCompile testDependencies.okhttpMockServer
 }

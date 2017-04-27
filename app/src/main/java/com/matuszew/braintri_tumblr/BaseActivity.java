@@ -47,6 +47,7 @@ public abstract class BaseActivity<B extends ViewDataBinding, P extends BasePres
         setActivityLayout();
         injectDependencies(applicationComponent.plus(activityModule));
         setupBinding();
+
     }
 
     protected void setLayout(){
@@ -55,6 +56,7 @@ public abstract class BaseActivity<B extends ViewDataBinding, P extends BasePres
 
     private void setupBinding(){
         binding.setVariable(BR.vm, presenter.getViewModel());
+        presenter.init();
     }
 
     protected void setActivityLayoutAndBinding(@LayoutRes int layoutId){
@@ -64,19 +66,16 @@ public abstract class BaseActivity<B extends ViewDataBinding, P extends BasePres
     @Override
     protected void onResume() {
         super.onResume();
-        presenter.init();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        presenter.clear();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        presenter.clear();
     }
 
     protected abstract void setActivityLayout();

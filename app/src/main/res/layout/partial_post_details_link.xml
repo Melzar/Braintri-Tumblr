@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="vm"
+            type="com.matuszew.braintri_tumblr.posts.details.PostDetailsContract.ViewModel"/>
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/LinearLayout.Header.DarkBlue"
+            android:id="@+id/heading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextView.Header.Light"
+                android:id="@+id/tv_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollHorizontally="true"
+                htmlText="@{vm.model.linkText}"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/TextView.SubHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{vm.model.date}"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+            <TextView
+                style="@style/TextView.Content"
+                android:id="@+id/tv_subheading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@{vm.model.linkUrl}"/>
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

@@ -6,13 +6,20 @@
             type="com.matuszew.braintri_tumblr.posts.details.PostDetailsViewModel"/>
     </data>
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.matuszew.braintri_tumblr.posts.details.PostDetailsActivity">
 
-        <include layout="@layout/partial_action_bar"/>
+        <include layout="@layout/partial_action_bar" android:id="@+id/top_action_bar"/>
 
-    </android.support.constraint.ConstraintLayout>
+        <ViewStub
+            android:id="@+id/post_details_stub"
+            android:layout_below="@+id/top_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
 </layout>

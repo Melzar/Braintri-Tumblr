@@ -1,5 +1,6 @@
 package com.matuszew.data.common.mapper.post;
 
+import com.matuszew.data.common.mapper.conversation.RestConversationMapper;
 import com.matuszew.data.common.model.bo.Post;
 import com.matuszew.data.common.model.json.PostJson;
 
@@ -17,7 +18,10 @@ import java.util.List;
  */
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE,
-        nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS)
+        nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS,
+        uses = {
+                RestConversationMapper.class
+        })
 public interface RestPostMapper {
 
     RestPostMapper INSTANCE = Mappers.getMapper(RestPostMapper.class);

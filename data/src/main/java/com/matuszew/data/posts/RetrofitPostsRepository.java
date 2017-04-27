@@ -1,6 +1,7 @@
 package com.matuszew.data.posts;
 
 import com.matuszew.data.common.mapper.tumblr.RestTumblrMapper;
+import com.matuszew.data.common.model.bo.Post;
 import com.matuszew.data.common.model.bo.Tumblr;
 import com.matuszew.data.common.model.json.TumblrJson;
 import com.matuszew.data.posts.request.GetPostDetailsRequest;
@@ -34,12 +35,12 @@ public class RetrofitPostsRepository implements PostsRepository {
     }
 
     @Override
-    public Single<Tumblr> getPostDetails(GetPostDetailsRequest getPostDetailsRequest) {
+    public Single<Post> getPostDetails(GetPostDetailsRequest getPostDetailsRequest) {
         return postsRest.getPost(getPostDetailsRequest.getPostId())
-                .flatMap(new Function<TumblrJson, SingleSource<? extends Tumblr>>() {
+                .flatMap(new Function<TumblrJson, SingleSource<? extends Post>>() {
             @Override
-            public SingleSource<? extends Tumblr> apply(@NonNull TumblrJson tumblrJson) throws Exception {
-                return Single.just(RestTumblrMapper.INSTANCE.map(tumblrJson));
+            public SingleSource<? extends Post> apply(@NonNull TumblrJson tumblrJson) throws Exception {
+                return Single.just(RestTumblrMapper.INSTANCE.map(tumblrJson).getPosts().get(0));
             }
         });
     }

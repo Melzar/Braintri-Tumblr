@@ -66,6 +66,58 @@
         <item name="contentPaddingBottom">@dimen/activity_horizontal_margin</item>
     </style>
 
+    <!-- LinearLayout styles -->
+
+    <style name="LinearLayout"></style>
+
+    <style name="LinearLayout.Header">
+        <item name="android:padding">@dimen/space_xxl</item>
+    </style>
+
+    <style name="LinearLayout.Header.Green">
+        <item name="android:background">@color/colorGreen</item>
+    </style>
+
+    <style name="LinearLayout.Header.Violet">
+        <item name="android:background">@color/colorViolet</item>
+    </style>
+
+    <style name="LinearLayout.Header.Orange">
+        <item name="android:background">@color/colorOrange</item>
+    </style>
+
+    <style name="LinearLayout.Header.DarkBlue">
+        <item name="android:background">@color/colorDarkBlue</item>
+    </style>
+
+    <style name="LinearLayout.Header.LightRed">
+        <item name="android:background">@color/colorLightRed</item>
+    </style>
+
+    <!-- TextView styles -->
+    <style name="TextView"></style>
+
+    <style name="TextView.Content">
+        <item name="android:paddingLeft">@dimen/space_xxl</item>
+        <item name="android:paddingRight">@dimen/space_xxl</item>
+        <item name="android:paddingBottom">@dimen/space_xxl</item>
+        <item name="android:layout_marginTop">@dimen/space_xl</item>
+    </style>
+
+    <style name="TextView.Header">
+        <item name="android:textSize">@dimen/font_xxl</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView.Header.Light">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextView.SubHeader">
+        <item name="android:padding">@dimen/space_md</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
     <!-- EditText styles -->
 
     <style name="EditText">
@@ -91,7 +143,6 @@
     </style>
 
 
-    android:background=""
     <!-- Login Screen styles -->
 
     <style name="Login"></style>
