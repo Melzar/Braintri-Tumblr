@@ -91,6 +91,11 @@ dependencies {
 
     compile presentationDependencies.picasso
 
+    compile presentationDependencies.leakCanary
+
+    compile presentationDependencies.stetho
+    compile presentationDependencies.stethoOkHttp
+
     testCompile testDependencies.jUnit
     testCompile testDependencies.okhttpMockServer
     compile 'com.android.support.constraint:constraint-layout:1.0.2'

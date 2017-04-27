@@ -16,6 +16,8 @@ ext {
     butterknife = '8.5.1'
     constraintLayout = '+'
     picasso = "2.5.2"
+    leakCanary = '1.5.1'
+    stetho = '1.5.0'
     //endregion
 
 
@@ -30,6 +32,7 @@ ext {
     //region Testing dependencies
     jUnit = '4.12'
     espresso = '2.2.2'
+    modelCitizen = '0.8.2'
     //endregion
 
     commonDependencies = [
@@ -59,7 +62,12 @@ ext {
         picasso: "com.squareup.picasso:picasso:${picasso}",
 
         okHttpInterceptor: "com.squareup.okhttp3:logging-interceptor:${okhttp}",
-        rxAdapter: "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${rxAdapter}"
+        rxAdapter: "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${rxAdapter}",
+
+        leakCanary: "com.squareup.leakcanary:leakcanary-android:${leakCanary}",
+
+        stetho: "com.facebook.stetho:stetho:${stetho}",
+        stethoOkHttp: "com.facebook.stetho:stetho-okhttp3:${stetho}"
     ]
 
     domainDependencies = [
@@ -74,6 +82,7 @@ ext {
     testDependencies = [
        jUnit: "junit:junit:${jUnit}",
        espresso: "com.android.support.test.espresso:espresso-core:${espresso}",
-       okhttpMockServer: "com.squareup.okhttp3:mockwebserver:${okhttp}"
+       okhttpMockServer: "com.squareup.okhttp3:mockwebserver:${okhttp}",
+       modelCitizen: "com.tobedevoured.modelcitizen:core:${modelCitizen}"
     ]
 }

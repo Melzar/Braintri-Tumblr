@@ -23,7 +23,7 @@
 
     <!-- CardView Height -->
 
-    <dimen name="post_list_item_height">110dp</dimen>
+    <dimen name="post_list_item_height">120dp</dimen>
     <dimen name="post_list_item_vertical_margin">8dp</dimen>
 
 </resources>

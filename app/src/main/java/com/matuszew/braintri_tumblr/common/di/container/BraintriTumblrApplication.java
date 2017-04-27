@@ -2,8 +2,10 @@ package com.matuszew.braintri_tumblr.common.di.container;
 
 import android.app.Application;
 
+import com.facebook.stetho.Stetho;
 import com.matuszew.braintri_tumblr.common.di.component.ApplicationComponent;
 import com.matuszew.braintri_tumblr.common.di.component.DaggerApplicationComponent;
+import com.squareup.leakcanary.LeakCanary;
 
 /**
  * Created by matuszewski on 24/04/2017.
@@ -20,6 +22,14 @@ public class BraintriTumblrApplication extends Application {
         super.onCreate();
         application = this;
         applicationComponent = DaggerApplicationComponent.builder().build();
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+            // This process is dedicated to LeakCanary for heap analysis.
+            // You should not init your app in this process.
+            return;
+        }
+        LeakCanary.install(this);
+        // Normal app init code...
+        Stetho.initializeWithDefaults(this);
 
     }
 
