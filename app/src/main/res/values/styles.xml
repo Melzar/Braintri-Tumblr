@@ -66,6 +66,15 @@
         <item name="contentPaddingBottom">@dimen/activity_horizontal_margin</item>
     </style>
 
+    <style name="CustomCardView.Header">
+        <item name="android:textSize">@dimen/font_xl</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomCardView.SubHeader" parent="CustomCardView.Header">
+        <item name="android:textSize">@dimen/font_lg</item>
+    </style>
+
     <!-- LinearLayout styles -->
 
     <style name="LinearLayout"></style>

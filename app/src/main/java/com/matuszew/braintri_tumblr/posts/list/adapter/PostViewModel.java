@@ -38,27 +38,4 @@ public class PostViewModel
         navigator.startActivity(PostDetailsActivity.class, bundle);
     }
 
-    public String getId(){
-        return getModel().getId();
-    }
-
-    public String getUrl(){
-        return getModel().getUrl();
-    }
-
-    public String getUrlSlug(){
-        return getModel().getUrlWithSlug();
-    }
-
-    public String getType(){
-        return getModel().getType();
-    }
-
-    public String getDateGmt(){
-        return getModel().getDateGmt();
-    }
-
-    public String getDate(){
-        return getModel().getDate();
-    }
 }
