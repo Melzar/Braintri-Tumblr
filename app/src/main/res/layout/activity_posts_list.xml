@@ -6,7 +6,7 @@
             type="com.matuszew.braintri_tumblr.posts.list.PostsListViewModel"/>
     </data>
     <RelativeLayout
-        style="@style/Activity.BackgroundBeige"
+        style="@style/Activity.BackgroundDark"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"

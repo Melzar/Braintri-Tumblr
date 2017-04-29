@@ -1,5 +1,7 @@
 package com.matuszew.braintri_tumblr.common.di.module;
 
+import android.os.Handler;
+
 import javax.inject.Named;
 import javax.inject.Singleton;
 
@@ -25,4 +27,8 @@ public class ThreadModule {
     @Singleton
     @Named("observe")
     public Scheduler provideObserveOn(){return AndroidSchedulers.mainThread();}
+
+    @Provides
+    @Singleton
+    public Handler provideHandler(){return new Handler();}
 }

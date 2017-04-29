@@ -18,12 +18,12 @@ public class SplashPresenter
 
     @Override
     public void init() {
-        getViewModel().update(null);
+
     }
 
     @Override
     public void init(Void model) {
-
+        getViewModel().update(null);
     }
 
     @Override

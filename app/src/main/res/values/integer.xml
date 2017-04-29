@@ -2,4 +2,6 @@
 <resources>
     <integer name="navigation_posts_list_order">0</integer>
     <integer name="navigation_logout_order">1</integer>
+
+    <integer name="splash_delay_timeout">1500</integer>
 </resources>

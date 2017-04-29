@@ -18,6 +18,7 @@ public class Post {
     private String type;
     private String dateGmt;
     private String date;
+    private String noteCount;
 
     // QUOTE TYPE FIELD
     private String quoteText;
@@ -67,6 +68,7 @@ public class Post {
                     String type,
                     String dateGmt,
                     String date,
+                    String noteCount,
                     String quoteText,
                     String quoteSource,
                     String photoCaption,
@@ -98,6 +100,7 @@ public class Post {
         this.type = type;
         this.dateGmt = dateGmt;
         this.date = date;
+        this.noteCount = noteCount;
         this.quoteText = quoteText;
         this.quoteSource = quoteSource;
         this.photoCaption = photoCaption;
@@ -171,6 +174,14 @@ public class Post {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getNoteCount() {
+        return noteCount;
+    }
+
+    public void setNoteCount(String noteCount) {
+        this.noteCount = noteCount;
     }
 
     public String getQuoteText() {

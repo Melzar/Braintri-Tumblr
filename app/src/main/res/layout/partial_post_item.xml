@@ -5,7 +5,6 @@
             name="vm"
             type="com.matuszew.braintri_tumblr.posts.list.adapter.PostViewModel"/>
     </data>
-
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
@@ -17,30 +16,52 @@
             style="@style/CustomCardView.PostCardView"
             android:id="@+id/post_item_card"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/card_view_elevation"
             app:cardPreventCornerOverlap="false">
-            <LinearLayout
+            <RelativeLayout
+                style="@style/CustomCardView.Header"
+                android:id="@+id/post_item_card_header"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                >
+                android:background="@{vm.headerBackground}">
+                <ImageView
+                    style="@style/ImageView.HeaderImage"
+                    android:id="@+id/post_type_icon"
+                    android:src="@{vm.icon}"/>
                 <TextView
-                    style="@style/CustomCardView.Header"
+                    style="@style/TextView.HeaderDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{vm.model.id}" />
-                <TextView
-                    style="@style/CustomCardView.SubHeader"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@{vm.date}"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/post_item_card_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+            </LinearLayout>
+            <LinearLayout
+                style="@style/LinearLayout.PostFooter"
+                android:id="@+id/post_item_card_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/post_item_card_tags"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{vm.model.type}"/>
+                    android:orientation="horizontal"
+                    postTags="@{vm.model.tags}">
+                </LinearLayout>
                 <TextView
+                    style="@style/TextView.FooterNotes"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@{vm.model.date}"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@{vm.model.url}"/>
+                    android:layout_height="match_parent"
+                    android:text="@{vm.notes}"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>

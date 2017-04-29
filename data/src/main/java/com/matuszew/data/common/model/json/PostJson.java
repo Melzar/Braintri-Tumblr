@@ -18,6 +18,8 @@ public class PostJson {
     @SerializedName("date-gmt")
     private String dateGmt;
     private String date;
+    @SerializedName("note-count")
+    private String noteCount;
 
     // QUOTE TYPE FIELD
     @SerializedName("quote-text")
@@ -89,6 +91,7 @@ public class PostJson {
                     String date,
                     String quoteText,
                     String quoteSource,
+                    String noteCount,
                     String photoUrl1280,
                     String photoUrl500,
                     String photoUrl400,
@@ -117,6 +120,7 @@ public class PostJson {
         this.type = type;
         this.dateGmt = dateGmt;
         this.date = date;
+        this.noteCount = noteCount;
         this.quoteText = quoteText;
         this.quoteSource = quoteSource;
         this.photoUrl1280 = photoUrl1280;
@@ -189,6 +193,14 @@ public class PostJson {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getNoteCount() {
+        return noteCount;
+    }
+
+    public void setNoteCount(String noteCount) {
+        this.noteCount = noteCount;
     }
 
     public String getQuoteText() {

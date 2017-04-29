@@ -9,6 +9,9 @@
     <color name="colorViolet">#a77dc2</color>
     <color name="colorOrange">#f2992e</color>
     <color name="colorDarkBlue">#36465d</color>
+    <color name="colorBlacky">#444</color>
     <color name="colorLightRed">#d95e40</color>
     <color name="colorBeige">#FFDCD7CC</color>
+    <color name="colorLightGray">#afafaf</color>
+    <color name="colorMediumGray">#748089</color>
 </resources>

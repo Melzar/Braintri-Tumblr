@@ -55,24 +55,21 @@
     <style name="CustomCardView"></style>
 
     <style name="CustomCardView.PostCardView">
-        <item name="android:layout_height">@dimen/post_list_item_height</item>
+        <item name="android:minHeight">@dimen/post_list_item_height</item>
         <item name="android:layout_marginTop">@dimen/post_list_item_vertical_margin</item>
         <item name="android:layout_marginBottom">@dimen/post_list_item_vertical_margin</item>
         <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
         <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
-        <item name="contentPaddingLeft">@dimen/activity_vertical_margin</item>
-        <item name="contentPaddingRight">@dimen/activity_vertical_margin</item>
-        <item name="contentPaddingTop">@dimen/activity_horizontal_margin</item>
-        <item name="contentPaddingBottom">@dimen/activity_horizontal_margin</item>
     </style>
 
     <style name="CustomCardView.Header">
+        <item name="android:layout_height">@dimen/post_list_item_header_height</item>
+        <item name="android:paddingLeft">@dimen/space_lg</item>
+        <item name="android:paddingRight">@dimen/space_lg</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/font_xl</item>
         <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="CustomCardView.SubHeader" parent="CustomCardView.Header">
-        <item name="android:textSize">@dimen/font_lg</item>
     </style>
 
     <!-- LinearLayout styles -->
@@ -103,6 +100,15 @@
         <item name="android:background">@color/colorLightRed</item>
     </style>
 
+    <!-- Post Item -->
+
+    <style name="LinearLayout.PostFooter">
+        <item name="android:paddingLeft">@dimen/space_lg</item>
+        <item name="android:paddingRight">@dimen/space_lg</item>
+        <item name="android:paddingBottom">@dimen/space_sm</item>
+        <item name="android:paddingTop">@dimen/space_sm</item>
+    </style>
+
     <!-- TextView styles -->
     <style name="TextView"></style>
 
@@ -127,6 +133,27 @@
         <item name="android:gravity">center</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <!-- Post item -->
+    <style name="TextView.HeaderDate">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAlignment">gravity</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextView.FooterNotes">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">gravity</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <!-- Tag style -->
+
+    <style name="TextView.Tag">
+        <item name="android:layout_marginRight">@dimen/space_xs</item>
+        <item name="android:color">@color/colorAccent</item>
+    </style>
+
     <!-- EditText styles -->
 
     <style name="EditText">
@@ -151,6 +178,18 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
+    <!-- ImageView -->
+
+    <style name="ImageView"></style>
+
+    <!-- Post Item ImageView -->
+
+    <style name="ImageView.HeaderImage">
+        <item name="android:layout_width">@dimen/post_item_width</item>
+        <item name="android:layout_height">@dimen/post_item_height</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:tint">@android:color/white</item>
+    </style>
 
     <!-- Login Screen styles -->
 

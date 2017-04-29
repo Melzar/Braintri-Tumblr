@@ -4,6 +4,9 @@
 
     <!-- General strings -->
 
+    <string name="default_date_format">HH:mm:ss MM/dd/yyyy</string>
+    <string name="tumblr_source_date_format">EEE, d MMM yyyy HH:mm:ss</string>
+
     <string name="activity_posts_lists">Posts list</string>
     <string name="activity_post_details">Post details</string>
 
@@ -25,6 +28,11 @@
 
     <string name="login_username_hint">Username</string>
     <string name="login_submit_button">Preview posts</string>
+
+    <!-- Post item -->
+
+    <string name="post_item_notes">Notes count: %s</string>
+    <string name="post_item_tag">#%s \u0020</string>
 
 
 </resources>
