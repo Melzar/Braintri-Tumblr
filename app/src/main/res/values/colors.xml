@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#36465d</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="colorWhite">@android:color/white</color>
     <color name="colorBlue">#529ecc</color>
     <color name="colorGreen">#56bc8a</color>
     <color name="colorViolet">#a77dc2</color>
