@@ -36,9 +36,16 @@ public class PostDetailsViewModel
     }
 
     @BindingAdapter("htmlText")
-    public static void preselectType(TextView textView, String text){
+    public static void applyTextContent(TextView textView, String text){
         if(text != null){
             textView.setText(Html.fromHtml(text).toString());
+        }
+    }
+
+    @BindingAdapter("htmlTextNonEscaped")
+    public static void applyNonEscapedTextConent(TextView textView, String text){
+        if(text != null){
+            textView.setText(Html.fromHtml(text));
         }
     }
 

@@ -42,4 +42,6 @@
 
     <string name="post_details_content_header">Content</string>
     <string name="post_details_details_header">Details</string>
+    <string name="post_details_title_header">Title</string>
+    <string name="post_details_body_header">Body</string>
 </resources>
