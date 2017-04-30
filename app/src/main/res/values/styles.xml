@@ -144,10 +144,7 @@
     </style>
 
     <style name="TextView.Content">
-        <item name="android:paddingLeft">@dimen/space_xxl</item>
-        <item name="android:paddingRight">@dimen/space_xxl</item>
-        <item name="android:paddingBottom">@dimen/space_xxl</item>
-        <item name="android:layout_marginTop">@dimen/space_xl</item>
+        <item name="android:padding">@dimen/space_md</item>
     </style>
 
     <style name="TextView.Header">
