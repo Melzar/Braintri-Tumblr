@@ -1,12 +1,18 @@
 package com.matuszew.braintri_tumblr.posts.details;
 
 import android.databinding.BindingAdapter;
+import android.graphics.drawable.Drawable;
 import android.text.Html;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.matuszew.braintri_tumblr.BaseViewModel;
+import com.matuszew.braintri_tumblr.R;
+import com.matuszew.braintri_tumblr.common.di.container.BraintriTumblrApplication;
+import com.matuszew.braintri_tumblr.common.enumeration.PostBackgroundEnumeration;
+import com.matuszew.braintri_tumblr.common.enumeration.PostIconEnumeration;
+import com.matuszew.braintri_tumblr.common.formatter.DateFormatter;
 import com.matuszew.data.common.model.bo.Post;
 import com.squareup.picasso.Picasso;
 
@@ -49,5 +55,33 @@ public class PostDetailsViewModel
             webView.getSettings().setJavaScriptEnabled(true);
             webView.loadData(content,"text/html; charset=utf-8", "UTF-8");
         }
+    }
+
+    @Override
+    public String getDate() {
+        return DateFormatter.formatDateFromString(BraintriTumblrApplication.getApplication()
+                .getString(R.string.tumblr_source_date_format),BraintriTumblrApplication.getApplication()
+                .getString(R.string.default_date_format),getModel().getDate());
+    }
+
+    @Override
+    public String getNotes() {
+        return BraintriTumblrApplication.getApplication()
+                .getString(R.string.post_item_notes, getModel().getNoteCount());
+    }
+
+    @Override
+    public Drawable getIcon() {
+        return BraintriTumblrApplication.getApplication()
+                .getResources().getDrawable(PostIconEnumeration.getPostIconFromString(getModel()
+                        .getType()).getPostIcon());
+    }
+
+    @Override
+    public int getHeaderBackground() {
+        return BraintriTumblrApplication
+                .getApplication().getResources()
+                .getColor(PostBackgroundEnumeration.getPostBackgroundFromString(getModel()
+                        .getType()).getPostBackgroundColor());
     }
 }

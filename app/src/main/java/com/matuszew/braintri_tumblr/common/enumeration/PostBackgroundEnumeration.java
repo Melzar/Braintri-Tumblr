@@ -1,7 +1,7 @@
 package com.matuszew.braintri_tumblr.common.enumeration;
 
 import com.matuszew.braintri_tumblr.R;
-import com.matuszew.braintri_tumblr.posts.details.enumeration.PostType;
+import com.matuszew.braintri_tumblr.common.typedef.PostType;
 
 import java.util.HashMap;
 
@@ -22,12 +22,12 @@ public enum PostBackgroundEnumeration {
     private int postBackgroundColor;
 
     private static HashMap<String,PostBackgroundEnumeration> backgroundMapping = new HashMap<String, PostBackgroundEnumeration>(){{
-        put(PostType.REGULAR, PostBackgroundEnumeration.REGULAR);
-        put(PostType.LINK, PostBackgroundEnumeration.LINK);
-        put(PostType.AUDIO, PostBackgroundEnumeration.AUDIO);
-        put(PostType.CONVERSATION, PostBackgroundEnumeration.CONVERSATION);
-        put(PostType.PHOTO, PostBackgroundEnumeration.PHOTO);
-        put(PostType.QUOTE, PostBackgroundEnumeration.QUOTE);
+        put(PostType.REGULAR, REGULAR);
+        put(PostType.LINK, LINK);
+        put(PostType.AUDIO, AUDIO);
+        put(PostType.CONVERSATION, CONVERSATION);
+        put(PostType.PHOTO, PHOTO);
+        put(PostType.QUOTE, QUOTE);
     }};
 
     PostBackgroundEnumeration(int postHeaderColor) {

@@ -62,6 +62,10 @@
         <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
     </style>
 
+    <style name="CustomCardView.Container" parent="CustomCardView.PostCardView">
+        <item name="android:minHeight">@dimen/post_details_container_height</item>
+    </style>
+
     <style name="CustomCardView.Header">
         <item name="android:layout_height">@dimen/post_list_item_header_height</item>
         <item name="android:paddingLeft">@dimen/space_lg</item>
@@ -109,8 +113,36 @@
         <item name="android:paddingTop">@dimen/space_sm</item>
     </style>
 
+    <!-- Post Details -->
+
+    <style name="LinearLayout.Container">
+        <item name="android:layout_marginTop">@dimen/space_sm</item>
+        <item name="android:layout_marginBottom">@dimen/space_sm</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <!-- RelativeLayout styles -->
+
+    <style name="RelativeLayout"></style>
+
+    <!-- Post Details section -->
+
+    <style name="RelativeLayout.Details">
+        <item name="android:paddingTop">@dimen/space_sm</item>
+        <item name="android:paddingBottom">@dimen/space_sm</item>
+        <item name="android:paddingRight">@dimen/space_lg</item>
+        <item name="android:paddingLeft">@dimen/space_lg</item>
+    </style>
+
+
     <!-- TextView styles -->
+
     <style name="TextView"></style>
+
+    <style name="TextView.Centered">
+        <item name="android:textAlignment">center</item>
+    </style>
 
     <style name="TextView.Content">
         <item name="android:paddingLeft">@dimen/space_xxl</item>
@@ -135,6 +167,7 @@
     </style>
 
     <!-- Post item -->
+
     <style name="TextView.HeaderDate">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textAlignment">gravity</item>
@@ -145,6 +178,26 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textAlignment">gravity</item>
         <item name="android:gravity">right</item>
+    </style>
+
+    <!-- Post details -->
+
+    <style name="TextView.ContainerHeader">
+        <item name="android:textColor">@color/colorLightGray</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">@dimen/space_sm</item>
+        <item name="android:layout_marginBottom">@dimen/space_sm</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="TextView.ContainerElement" parent="TextView.ContainerHeader">
+        <item name="android:textColor">@color/colorLightGray</item>
+        <item name="android:textAlignment">gravity</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/space_lg</item>
+        <item name="android:layout_marginTop">@dimen/space_sm</item>
+        <item name="android:layout_marginBottom">@dimen/space_sm</item>
     </style>
 
     <!-- Tag style -->
@@ -189,6 +242,15 @@
         <item name="android:layout_height">@dimen/post_item_height</item>
         <item name="android:layout_centerInParent">true</item>
         <item name="android:tint">@android:color/white</item>
+    </style>
+
+    <!-- Post Details ImageView -->
+
+    <style name="ImageView.ContainerIcon">
+        <item name="android:layout_width">@dimen/post_details_section_image_width</item>
+        <item name="android:layout_height">@dimen/post_details_section_image_height</item>
+        <item name="android:paddingRight">@dimen/space_sm</item>
+        <item name="android:tint">@color/colorLightGray</item>
     </style>
 
     <!-- Login Screen styles -->

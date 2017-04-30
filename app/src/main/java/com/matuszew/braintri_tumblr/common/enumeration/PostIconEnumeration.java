@@ -1,7 +1,7 @@
 package com.matuszew.braintri_tumblr.common.enumeration;
 
 import com.matuszew.braintri_tumblr.R;
-import com.matuszew.braintri_tumblr.posts.details.enumeration.PostType;
+import com.matuszew.braintri_tumblr.common.typedef.PostType;
 
 import java.util.HashMap;
 
@@ -22,12 +22,12 @@ public enum  PostIconEnumeration {
 
     private static HashMap<String, PostIconEnumeration> iconMapping =
             new HashMap<String, PostIconEnumeration>(){{
-        put(PostType.REGULAR, PostIconEnumeration.REGULAR);
-        put(PostType.LINK, PostIconEnumeration.LINK);
-        put(PostType.AUDIO, PostIconEnumeration.AUDIO);
-        put(PostType.CONVERSATION, PostIconEnumeration.CONVERSATION);
-        put(PostType.PHOTO, PostIconEnumeration.PHOTO);
-        put(PostType.QUOTE, PostIconEnumeration.QUOTE);
+        put(PostType.REGULAR, REGULAR);
+        put(PostType.LINK, LINK);
+        put(PostType.AUDIO, AUDIO);
+        put(PostType.CONVERSATION, CONVERSATION);
+        put(PostType.PHOTO, PHOTO);
+        put(PostType.QUOTE, QUOTE);
     }};
 
     PostIconEnumeration(int postIcon){

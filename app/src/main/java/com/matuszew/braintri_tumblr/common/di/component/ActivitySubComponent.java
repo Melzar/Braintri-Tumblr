@@ -1,6 +1,7 @@
 package com.matuszew.braintri_tumblr.common.di.component;
 
 import com.matuszew.braintri_tumblr.common.di.module.ActivityModule;
+import com.matuszew.braintri_tumblr.common.di.module.FragmentModule;
 import com.matuszew.braintri_tumblr.common.di.module.PresenterModule;
 import com.matuszew.braintri_tumblr.common.di.module.ViewModelModule;
 import com.matuszew.braintri_tumblr.common.di.scope.ActivityScope;
@@ -30,4 +31,5 @@ public interface ActivitySubComponent {
 
         HelperSubComponent plus();
         ViewHolderSubComponent plusViewHolder();
+        FragmentSubComponent plusFragment(FragmentModule fragmentModule);
 }

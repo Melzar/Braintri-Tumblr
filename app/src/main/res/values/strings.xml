@@ -34,5 +34,12 @@
     <string name="post_item_notes">Notes count: %s</string>
     <string name="post_item_tag">#%s \u0020</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    <!-- Post Details -->
+
+    <string name="post_details_content_header">Content</string>
+    <string name="post_details_details_header">Details</string>
 </resources>
