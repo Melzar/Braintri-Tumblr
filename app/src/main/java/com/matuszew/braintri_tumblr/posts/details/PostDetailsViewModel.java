@@ -38,7 +38,7 @@ public class PostDetailsViewModel
     @BindingAdapter("htmlText")
     public static void preselectType(TextView textView, String text){
         if(text != null){
-            textView.setText(Html.fromHtml(text));
+            textView.setText(Html.fromHtml(text).toString());
         }
     }
 
@@ -83,5 +83,10 @@ public class PostDetailsViewModel
                 .getApplication().getResources()
                 .getColor(PostBackgroundEnumeration.getPostBackgroundFromString(getModel()
                         .getType()).getPostBackgroundColor());
+    }
+
+    @Override
+    public void navigateToUrl() {
+        navigator.navigateToUrl(getModel().getLinkUrl());
     }
 }

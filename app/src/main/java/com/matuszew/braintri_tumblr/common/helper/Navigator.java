@@ -3,6 +3,7 @@ package com.matuszew.braintri_tumblr.common.helper;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import javax.inject.Inject;
@@ -32,5 +33,11 @@ public final class Navigator extends ContextWrapper{
         Intent intent = new Intent(this, activityToStart);
         intent.putExtras(bundleToPass);
         startActivity(intent);
+    }
+
+    public void navigateToUrl(String url){
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
     }
 }

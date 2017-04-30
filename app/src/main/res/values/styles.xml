@@ -55,7 +55,6 @@
     <style name="CustomCardView"></style>
 
     <style name="CustomCardView.PostCardView">
-        <item name="android:minHeight">@dimen/post_list_item_height</item>
         <item name="android:layout_marginTop">@dimen/post_list_item_vertical_margin</item>
         <item name="android:layout_marginBottom">@dimen/post_list_item_vertical_margin</item>
         <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
@@ -176,8 +175,7 @@
 
     <style name="TextView.FooterNotes">
         <item name="android:textStyle">bold</item>
-        <item name="android:textAlignment">gravity</item>
-        <item name="android:gravity">right</item>
+        <item name="android:textAlignment">center</item>
     </style>
 
     <!-- Post details -->

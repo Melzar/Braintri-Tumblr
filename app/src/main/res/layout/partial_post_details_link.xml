@@ -6,52 +6,125 @@
             type="com.matuszew.braintri_tumblr.posts.details.PostDetailsContract.ViewModel"/>
     </data>
 
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:fillViewport="true">
         <LinearLayout
-            style="@style/LinearLayout.Header.DarkBlue"
-            android:id="@+id/heading_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                style="@style/TextView.Header.Light"
-                android:id="@+id/tv_heading"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scrollHorizontally="true"
-                htmlText="@{vm.model.linkText}"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                style="@style/TextView.SubHeader"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@{vm.model.date}"/>
-        </LinearLayout>
-
-        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fillViewport="true">
-            <TextView
-                style="@style/TextView.Content"
-                android:id="@+id/tv_subheading"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@{vm.model.linkUrl}"/>
-        </ScrollView>
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <android.support.v7.widget.CardView
+                style="@style/CustomCardView.Container"
+                android:id="@+id/post_details_card_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/card_view_elevation"
+                app:cardPreventCornerOverlap="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        style="@style/CustomCardView.Header"
+                        android:background="@{vm.headerBackground}"
+                        android:id="@+id/post_card_header"
+                        android:layout_width="match_parent">
+
+                        <ImageView
+                            style="@style/ImageView.HeaderImage"
+                            android:id="@+id/post_type_icon"
+                            android:layout_centerInParent="true"
+                            android:src="@{vm.icon}"/>
+
+                    </RelativeLayout>
+                    <TextView
+                        style="@style/TextView.SubHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{vm.date}"/>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                style="@style/TextView.ContainerHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/post_details_content_header"/>
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/link_variant"
+                android:tint="@android:color/white"
+                android:layout_gravity="center"
+                android:onClick="@{() -> vm.navigateToUrl()}"
+                app:backgroundTint="@color/colorGreen"
+                />
+
+            <TextView
+                style="@style/TextView.ContainerHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/post_details_details_header"/>
+
+            <android.support.v7.widget.CardView
+                style="@style/CustomCardView.Container"
+                android:id="@+id/post_details_card_subheader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/card_view_elevation"
+                app:cardPreventCornerOverlap="false">
+
+                <RelativeLayout
+                    style="@style/RelativeLayout.Details"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        style="@style/TextView.Centered"
+                        android:id="@+id/link_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{vm.model.linkText}"/>
+                    <TextView
+                        style="@style/TextView.Centered"
+                        android:id="@+id/link_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/link_title"
+                        htmlText="@{vm.model.linkDescription}"/>
+                    <TextView
+                        style="@style/TextView.Centered"
+                        android:id="@+id/link_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/link_description"
+                        android:text="@{vm.model.linkUrl}"/>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                style="@style/LinearLayout.Container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                postTags="@{vm.model.tags}">
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextView.ContainerElement"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{vm.notes}"/>
+        </LinearLayout>
+    </ScrollView>
 
 </layout>

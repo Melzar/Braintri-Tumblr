@@ -22,6 +22,7 @@ public interface PostDetailsContract {
         public String getNotes();
         public Drawable getIcon();
         public int getHeaderBackground();
+        public void navigateToUrl();
 
     }
 }

@@ -78,7 +78,7 @@
                 style="@style/TextView.ContainerHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/post_details_content_header"/>
+                android:text="@string/post_details_details_header"/>
 
             <android.support.v7.widget.CardView
                 style="@style/CustomCardView.Container"
