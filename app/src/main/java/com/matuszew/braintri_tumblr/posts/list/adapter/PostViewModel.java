@@ -3,9 +3,9 @@ package com.matuszew.braintri_tumblr.posts.list.adapter;
 import android.databinding.BindingAdapter;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.flexbox.FlexboxLayout;
 import com.matuszew.braintri_tumblr.BaseViewModel;
 import com.matuszew.braintri_tumblr.R;
 import com.matuszew.braintri_tumblr.common.di.container.BraintriTumblrApplication;
@@ -73,7 +73,7 @@ public class PostViewModel
     }
 
     @BindingAdapter("postTags")
-    public static void applyPostTags(LinearLayout linearLayout, List<String> tagList){
+    public static void applyPostTags(FlexboxLayout linearLayout, List<String> tagList){
         if(tagList != null && linearLayout.getChildCount() == 0){
             for (String tag: tagList) {
                 TextView textView = new TextView(linearLayout.getContext());

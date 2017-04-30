@@ -17,7 +17,7 @@ public enum PostBackgroundEnumeration {
     CONVERSATION(R.color.colorBlue),
     PHOTO(R.color.colorLightRed),
     QUOTE(R.color.colorOrange),
-    MOVIE(R.color.colorMediumGray);
+    VIDEO(R.color.colorMediumGray);
 
     private int postBackgroundColor;
 
@@ -28,6 +28,7 @@ public enum PostBackgroundEnumeration {
         put(PostType.CONVERSATION, CONVERSATION);
         put(PostType.PHOTO, PHOTO);
         put(PostType.QUOTE, QUOTE);
+        put(PostType.VIDEO, VIDEO);
     }};
 
     PostBackgroundEnumeration(int postHeaderColor) {

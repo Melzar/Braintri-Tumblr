@@ -11,11 +11,12 @@ import static com.matuszew.braintri_tumblr.common.typedef.PostType.LINK;
 import static com.matuszew.braintri_tumblr.common.typedef.PostType.PHOTO;
 import static com.matuszew.braintri_tumblr.common.typedef.PostType.QUOTE;
 import static com.matuszew.braintri_tumblr.common.typedef.PostType.REGULAR;
+import static com.matuszew.braintri_tumblr.common.typedef.PostType.VIDEO;
 
 /**
  * Created by matuszewski on 27/04/2017.
  */
-@StringDef({REGULAR, LINK, AUDIO, CONVERSATION, PHOTO, QUOTE})
+@StringDef({REGULAR, LINK, AUDIO, CONVERSATION, PHOTO, QUOTE, VIDEO})
 @Retention(RetentionPolicy.SOURCE)
 public @interface PostType {
 
@@ -25,5 +26,6 @@ public @interface PostType {
     String CONVERSATION = "conversation";
     String PHOTO = "photo";
     String QUOTE = "quote";
+    String VIDEO = "video";
 }
 

@@ -47,13 +47,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:orientation="vertical">
-                    <LinearLayout
+                    <com.google.android.flexbox.FlexboxLayout
                         android:id="@+id/post_item_card_tags"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
+                        app:flexWrap="wrap"
                         postTags="@{vm.model.tags}">
-                    </LinearLayout>
+                    </com.google.android.flexbox.FlexboxLayout>
                     <TextView
                         style="@style/TextView.FooterNotes"
                         android:layout_width="match_parent"

@@ -173,6 +173,7 @@
     <style name="TextView.FooterNotes">
         <item name="android:textStyle">bold</item>
         <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginTop">@dimen/space_sm</item>
     </style>
 
     <!-- Post details -->

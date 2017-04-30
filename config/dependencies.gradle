@@ -18,6 +18,7 @@ ext {
     picasso = "2.5.2"
     leakCanary = '1.5.1'
     stetho = '1.5.0'
+    flexBox = '0.2.6'
     //endregion
 
 
@@ -55,7 +56,8 @@ ext {
         support: "com.android.support:support-v4:${supportLibrary}",
         supportCompat: "com.android.support:support-compat:${supportLibrary}",
         constraintLayout: "com.android.support.constraint:constraint-layout:${constraintLayout}",
-
+        flexLayout: "com.google.android:flexbox:${flexBox}",
+            
         butterknife: "com.jakewharton:butterknife:${butterknife}",
         butterknifeCompiler: "com.jakewharton:butterknife-compiler:${butterknife}",
 

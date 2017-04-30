@@ -44,6 +44,7 @@
     <string name="post_details_details_header">Details</string>
     <string name="post_details_discussion_header">Discussion</string>
     <string name="post_details_title_header">Title</string>
+    <string name="post_details_caption_header">Caption</string>
     <string name="post_details_body_header">Body</string>
 
     <string name="post_conversation">%1$s\n\n%2$s</string>

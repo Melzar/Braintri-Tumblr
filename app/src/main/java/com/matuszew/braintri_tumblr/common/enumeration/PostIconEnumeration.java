@@ -16,7 +16,8 @@ public enum  PostIconEnumeration {
     AUDIO(R.drawable.headphones),
     CONVERSATION(R.drawable.comment_text_outline),
     PHOTO(R.drawable.camera),
-    QUOTE(R.drawable.format_quote_close);
+    QUOTE(R.drawable.format_quote_close),
+    VIDEO(R.drawable.camcorder);
 
     private int postIcon;
 
@@ -28,6 +29,7 @@ public enum  PostIconEnumeration {
         put(PostType.CONVERSATION, CONVERSATION);
         put(PostType.PHOTO, PHOTO);
         put(PostType.QUOTE, QUOTE);
+        put(PostType.VIDEO, VIDEO);
     }};
 
     PostIconEnumeration(int postIcon){

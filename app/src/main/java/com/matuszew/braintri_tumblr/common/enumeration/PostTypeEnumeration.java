@@ -16,7 +16,8 @@ public enum  PostTypeEnumeration {
     AUDIO(R.layout.partial_post_details_audio),
     CONVERSATION(R.layout.partial_post_details_conversation),
     PHOTO(R.layout.partial_post_details_photo),
-    QUOTE(R.layout.partial_post_details_quote);
+    QUOTE(R.layout.partial_post_details_quote),
+    VIDEO(R.layout.partial_post_details_video);
 
     private int layoutRes;
 
@@ -28,6 +29,7 @@ public enum  PostTypeEnumeration {
         put(PostType.CONVERSATION, CONVERSATION);
         put(PostType.PHOTO, PHOTO);
         put(PostType.QUOTE, QUOTE);
+        put(PostType.VIDEO, VIDEO);
     }};
 
     PostTypeEnumeration(int layoutRes) {

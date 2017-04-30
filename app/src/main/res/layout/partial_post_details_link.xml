@@ -111,12 +111,13 @@
 
             </android.support.v7.widget.CardView>
 
-            <LinearLayout
+            <com.google.android.flexbox.FlexboxLayout
                 style="@style/LinearLayout.Container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:flexWrap="wrap"
                 postTags="@{vm.model.tags}">
-            </LinearLayout>
+            </com.google.android.flexbox.FlexboxLayout>
 
             <TextView
                 style="@style/TextView.ContainerElement"

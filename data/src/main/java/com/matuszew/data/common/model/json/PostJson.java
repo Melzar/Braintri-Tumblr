@@ -41,6 +41,14 @@ public class PostJson {
     @SerializedName("photo-url-75")
     private String photoUrl75;
 
+    // VIDEO TYPE FIELDS
+    @SerializedName("video-caption")
+    private String videoCaption;
+    @SerializedName("video-source")
+    private String videoSource;
+    @SerializedName("video-player")
+    private String videoPlayer;
+
     // CONVERSATION TYPE FIELDS
     @SerializedName("conversation-title")
     private String conversationTitle;
@@ -98,6 +106,9 @@ public class PostJson {
                     String photoUrl250,
                     String photoUrl100,
                     String photoUrl75,
+                    String videoCaption,
+                    String videoPlayer,
+                    String videoSource,
                     String conversationTitle,
                     String conversationText,
                     List<ConversationJson> conversation,
@@ -129,6 +140,9 @@ public class PostJson {
         this.photoUrl250 = photoUrl250;
         this.photoUrl100 = photoUrl100;
         this.photoUrl75 = photoUrl75;
+        this.videoCaption = videoCaption;
+        this.videoPlayer = videoPlayer;
+        this.videoSource = videoSource;
         this.conversationTitle = conversationTitle;
         this.conversationText = conversationText;
         this.conversation = conversation;
@@ -265,6 +279,30 @@ public class PostJson {
 
     public void setPhotoUrl75(String photoUrl75) {
         this.photoUrl75 = photoUrl75;
+    }
+
+    public String getVideoCaption() {
+        return videoCaption;
+    }
+
+    public void setVideoCaption(String videoCaption) {
+        this.videoCaption = videoCaption;
+    }
+
+    public String getVideoSource() {
+        return videoSource;
+    }
+
+    public void setVideoSource(String videoSource) {
+        this.videoSource = videoSource;
+    }
+
+    public String getVideoPlayer() {
+        return videoPlayer;
+    }
+
+    public void setVideoPlayer(String videoPlayer) {
+        this.videoPlayer = videoPlayer;
     }
 
     public String getConversationTitle() {

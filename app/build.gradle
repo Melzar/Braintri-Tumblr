@@ -82,6 +82,7 @@ dependencies {
     compile presentationDependencies.support
     compile presentationDependencies.supportCompat
     compile presentationDependencies.constraintLayout
+    compile presentationDependencies.flexLayout
 
     compile presentationDependencies.okHttpInterceptor
     compile presentationDependencies.rxAdapter
