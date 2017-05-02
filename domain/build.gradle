@@ -42,4 +42,7 @@ dependencies {
     compile commonDependencies.rxAndroid
 
     testCompile testDependencies.jUnit
+    testCompile testDependencies.mockito
+    testCompile testDependencies.modelCitizen
+
 }

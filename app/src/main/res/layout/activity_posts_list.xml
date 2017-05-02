@@ -5,7 +5,7 @@
             name="vm"
             type="com.matuszew.braintri_tumblr.posts.list.PostsListViewModel"/>
     </data>
-    <RelativeLayout
+    <android.support.design.widget.CoordinatorLayout
         style="@style/Activity.BackgroundDark"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -21,9 +21,10 @@
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:layout_below="@+id/top_action_bar"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             app:adapter="@{vm.postsAdapter}">
 
         </android.support.v7.widget.RecyclerView>
-    </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
 
 </layout>

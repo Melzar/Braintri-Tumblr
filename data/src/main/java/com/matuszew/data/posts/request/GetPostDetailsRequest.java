@@ -8,6 +8,9 @@ public class GetPostDetailsRequest {
 
     private String postId;
 
+    public GetPostDetailsRequest() {
+    }
+
     public GetPostDetailsRequest(String postId) {
         this.postId = postId;
     }

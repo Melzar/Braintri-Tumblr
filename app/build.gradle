@@ -99,4 +99,7 @@ dependencies {
 
     testCompile testDependencies.jUnit
     testCompile testDependencies.okhttpMockServer
+
+    testCompile testDependencies.mockito
+    testCompile testDependencies.modelCitizen
 }

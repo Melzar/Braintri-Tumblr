@@ -37,6 +37,9 @@ public class GetPostsRequest {
     private String tagged;
     private String chrono;
 
+    public GetPostsRequest() {
+    }
+
     public GetPostsRequest(String start,
                            String num,
                            String type,

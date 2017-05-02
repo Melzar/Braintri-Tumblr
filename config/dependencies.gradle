@@ -34,6 +34,7 @@ ext {
     jUnit = '4.12'
     espresso = '2.2.2'
     modelCitizen = '0.8.2'
+    mockito = '2.+'
     //endregion
 
     commonDependencies = [
@@ -85,6 +86,7 @@ ext {
        jUnit: "junit:junit:${jUnit}",
        espresso: "com.android.support.test.espresso:espresso-core:${espresso}",
        okhttpMockServer: "com.squareup.okhttp3:mockwebserver:${okhttp}",
+       mockito: "org.mockito:mockito-core:${mockito}",
        modelCitizen: "com.tobedevoured.modelcitizen:core:${modelCitizen}"
     ]
 }
