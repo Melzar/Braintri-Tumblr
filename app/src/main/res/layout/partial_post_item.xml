@@ -31,7 +31,7 @@
                     <ImageView
                         style="@style/ImageView.HeaderImage"
                         android:id="@+id/post_type_icon"
-                        android:src="@{vm.icon}"/>
+                        srcVector="@{vm.icon}"/>
                     <TextView
                         style="@style/TextView.HeaderDate"
                         android:layout_width="match_parent"

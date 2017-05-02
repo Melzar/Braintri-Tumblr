@@ -1,7 +1,6 @@
 package com.matuszew.braintri_tumblr.posts.details;
 
 import android.databinding.BindingAdapter;
-import android.graphics.drawable.Drawable;
 import android.support.v7.widget.CardView;
 import android.text.Html;
 import android.view.Gravity;
@@ -124,10 +123,9 @@ public class PostDetailsViewModel
     }
 
     @Override
-    public Drawable getIcon() {
-        return BraintriTumblrApplication.getApplication()
-                .getResources().getDrawable(PostIconEnumeration.getPostIconFromString(getModel()
-                        .getType()).getPostIcon());
+    public int getIcon() {
+        return PostIconEnumeration.getPostIconFromString(getModel()
+                .getType()).getPostIcon();
     }
 
     @Override

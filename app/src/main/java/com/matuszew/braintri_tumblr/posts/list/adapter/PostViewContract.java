@@ -1,7 +1,5 @@
 package com.matuszew.braintri_tumblr.posts.list.adapter;
 
-import android.graphics.drawable.Drawable;
-
 import com.matuszew.braintri_tumblr.BaseViewModelContract;
 import com.matuszew.data.common.model.bo.Post;
 
@@ -15,7 +13,7 @@ public interface PostViewContract {
 
         public String getDate();
         public String getNotes();
-        public Drawable getIcon();
+        public int getIcon();
         public int getHeaderBackground();
 
     }

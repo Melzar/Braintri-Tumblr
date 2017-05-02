@@ -1,8 +1,9 @@
 package com.matuszew.braintri_tumblr.posts.list.adapter;
 
 import android.databinding.BindingAdapter;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.DrawableRes;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.flexbox.FlexboxLayout;
@@ -59,10 +60,9 @@ public class PostViewModel
     }
 
     @Override
-    public Drawable getIcon() {
-        return BraintriTumblrApplication.getApplication()
-                .getResources().getDrawable(PostIconEnumeration.getPostIconFromString(getModel()
-                        .getType()).getPostIcon());
+    public int getIcon() {
+        return PostIconEnumeration.getPostIconFromString(getModel()
+                .getType()).getPostIcon();
     }
 
     @Override
@@ -70,6 +70,11 @@ public class PostViewModel
         return BraintriTumblrApplication
                 .getApplication().getResources().getColor(PostBackgroundEnumeration.getPostBackgroundFromString(getModel()
                         .getType()).getPostBackgroundColor());
+    }
+
+    @BindingAdapter("srcVector")
+    public static void applyVectorDrawable(ImageView imageView, @DrawableRes int drawableRes){
+        imageView.setImageResource(drawableRes);
     }
 
     @BindingAdapter("postTags")

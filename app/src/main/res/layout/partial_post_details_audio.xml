@@ -40,7 +40,7 @@
                             style="@style/ImageView.HeaderImage"
                             android:id="@+id/post_type_icon"
                             android:layout_centerInParent="true"
-                            android:src="@{vm.icon}"/>
+                            srcVector="@{vm.icon}"/>
 
                     </RelativeLayout>
                     <TextView
@@ -96,7 +96,7 @@
                         style="@style/ImageView.ContainerIcon"
                         android:id="@+id/audio_details_icon"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/music"/>
+                        app:srcCompat="@drawable/music"/>
                     <TextView
                         style="@style/TextView.Centered"
                         android:id="@+id/audio_artist"
